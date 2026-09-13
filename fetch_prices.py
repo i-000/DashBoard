@@ -14,6 +14,7 @@ igual de bien en local.
 """
 
 import json
+import time
 import datetime
 from pathlib import Path
 
@@ -22,6 +23,9 @@ import yfinance as yf
 CONFIG_PATH = Path("config.json")
 DATA_PATH = Path("docs/data.json")
 MAX_HISTORY_POINTS = 400
+REINTENTOS = 3
+ESPERA_ENTRE_REINTENTOS = 5  # segundos
+PERIODOS_A_PROBAR = ["1mo", "3mo"]  # si el primero viene vacio, se prueba el siguiente
 
 
 def cargar_json(path: Path, default):
@@ -38,12 +42,33 @@ def guardar_json(path: Path, data):
 
 
 def obtener_historial(symbol: str):
-    """Devuelve una lista de (fecha_iso, cierre) ordenada, o None si falla."""
-    ticker = yf.Ticker(symbol)
-    hist = ticker.history(period="1mo", auto_adjust=False)
-    if hist.empty:
-        return None, None
+    """Devuelve una lista de (fecha_iso, cierre) ordenada, o None si falla.
 
+    Reintenta varias veces y con distintos periodos antes de rendirse,
+    porque algunos simbolos fallan de forma intermitente (corte puntual
+    de Yahoo, fondo sin cotizacion fresca en ese instante, etc.) sin que
+    el simbolo en si este mal."""
+    ticker = yf.Ticker(symbol)
+    ultimo_error = None
+
+    for periodo in PERIODOS_A_PROBAR:
+        for intento in range(1, REINTENTOS + 1):
+            try:
+                hist = ticker.history(period=periodo, auto_adjust=False)
+                if not hist.empty:
+                    return _procesar_historial(hist, ticker)
+                ultimo_error = f"periodo {periodo}: respuesta vacia"
+            except Exception as e:
+                ultimo_error = f"periodo {periodo}: {e}"
+
+            if intento < REINTENTOS:
+                time.sleep(ESPERA_ENTRE_REINTENTOS)
+
+    print(f"    (tras varios reintentos, sigue sin datos: {ultimo_error})")
+    return None, None
+
+
+def _procesar_historial(hist, ticker):
     puntos = [
         (idx.strftime("%Y-%m-%d"), round(float(row["Close"]), 4))
         for idx, row in hist.iterrows()
