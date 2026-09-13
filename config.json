@@ -72,9 +72,9 @@
     },
     {
       "name": "ASML Holding",
-      "isin": null,
+      "isin": "NL0010273215",
       "type": "Accion",
-      "yahoo_symbol": "ASML",
+      "yahoo_symbol": "ASML.AS",
       "verified": true
     }
   ]
