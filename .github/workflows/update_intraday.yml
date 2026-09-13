@@ -2,8 +2,6 @@ name: Actualizar intradía (acciones/ETF/ETC)
 
 on:
   schedule:
-    # cada 15 minutos, de 07:00 a 21:00 UTC, de lunes a viernes
-    # (cubre el horario habitual de las bolsas europeas y estadounidenses)
     - cron: "*/15 7-21 * * 1-5"
   workflow_dispatch: {}
 
@@ -32,11 +30,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase
+          git checkout -B main
+          git pull --rebase origin main
           git add docs/data.json
           if git diff --staged --quiet; then
             echo "Sin cambios que guardar."
           else
             git commit -m "Actualiza precio intradía $(date -u +'%Y-%m-%d %H:%M')"
-            git push
+            git push origin main
           fi
