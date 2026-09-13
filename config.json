@@ -53,9 +53,9 @@
       "name": "iShares Copper Miners UCITS ETF",
       "isin": "IE00063FT9K6",
       "type": "ETF",
-      "yahoo_symbol": "IE00063FT9K6.SG",
+      "yahoo_symbol": "CEBS.DE",
       "verified": true
-    },
+    }
     {
       "name": "Apple Inc.",
       "isin": null,
