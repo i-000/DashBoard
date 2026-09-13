@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T16:20:00.366038Z",
+  "updated_at": "2026-09-13T16:36:24.371332Z",
   "holdings": {
     "IE0032126645": {
       "name": "Vanguard U.S. 500 Stock Index Fund EUR Acc",
@@ -867,105 +867,109 @@
       "last_date": "2026-09-11",
       "status": "ok"
     },
-    "ASML": {
+    "NL0010273215": {
       "name": "ASML Holding",
       "type": "Accion",
-      "isin": null,
-      "symbol": "ASML",
-      "currency": "USD",
+      "isin": "NL0010273215",
+      "symbol": "ASML.AS",
+      "currency": "EUR",
       "history": [
         {
+          "date": "2026-08-11",
+          "close": 1554.0
+        },
+        {
           "date": "2026-08-12",
-          "close": 1810.0699
+          "close": 1567.0
         },
         {
           "date": "2026-08-13",
-          "close": 1847.9
+          "close": 1609.4
         },
         {
           "date": "2026-08-14",
-          "close": 1844.08
+          "close": 1579.6
         },
         {
           "date": "2026-08-17",
-          "close": 1883.12
+          "close": 1621.2
         },
         {
           "date": "2026-08-18",
-          "close": 1802.98
+          "close": 1541.8
         },
         {
           "date": "2026-08-19",
-          "close": 1751.73
+          "close": 1507.6
         },
         {
           "date": "2026-08-20",
-          "close": 1750.3101
+          "close": 1505.4
         },
         {
           "date": "2026-08-21",
-          "close": 1763.76
+          "close": 1506.0
         },
         {
           "date": "2026-08-24",
-          "close": 1740.13
+          "close": 1489.8
         },
         {
           "date": "2026-08-25",
-          "close": 1744.16
+          "close": 1501.0
         },
         {
           "date": "2026-08-26",
-          "close": 1745.64
+          "close": 1497.6
         },
         {
           "date": "2026-08-27",
-          "close": 1735.01
+          "close": 1486.4
         },
         {
           "date": "2026-08-28",
-          "close": 1696.16
+          "close": 1494.4
         },
         {
           "date": "2026-08-31",
-          "close": 1696.01
+          "close": 1451.8
         },
         {
           "date": "2026-09-01",
-          "close": 1665.14
+          "close": 1435.4
         },
         {
           "date": "2026-09-02",
-          "close": 1682.3
+          "close": 1445.8
         },
         {
           "date": "2026-09-03",
-          "close": 1646.1899
+          "close": 1423.4
         },
         {
           "date": "2026-09-04",
-          "close": 1714.88
+          "close": 1467.4
         },
         {
           "date": "2026-09-08",
-          "close": 1764.85
+          "close": 1518.0
         },
         {
           "date": "2026-09-09",
-          "close": 1729.52
+          "close": 1497.6
         },
         {
           "date": "2026-09-10",
-          "close": 1687.4301
+          "close": 1474.2
         },
         {
           "date": "2026-09-11",
-          "close": 1698.3
+          "close": 1478.4
         }
       ],
-      "last_close": 1698.3,
-      "prev_close": 1687.4301,
-      "change_pct": 0.64,
+      "last_close": 1478.4,
+      "prev_close": 1474.2,
+      "change_pct": 0.28,
       "last_date": "2026-09-11",
       "status": "ok"
     }
