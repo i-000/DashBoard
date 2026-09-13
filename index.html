@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi cartera</title>
+<style>
+  :root {
+    --bg: #0f1420;
+    --card: #161d2e;
+    --card-border: #232c42;
+    --text: #e7ebf3;
+    --muted: #8993a8;
+    --green: #35d07f;
+    --red: #ff5c5c;
+    --accent: #6c8dff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 24px 16px 60px;
+  }
+  header {
+    max-width: 1100px;
+    margin: 0 auto 28px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin: 0 0 4px;
+  }
+  #updated {
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .grupo {
+    margin-bottom: 32px;
+  }
+  .grupo h2 {
+    font-size: 1rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 12px;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 8px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 16px;
+  }
+  .card .name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.25;
+    min-height: 2.4em;
+  }
+  .card .price-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  .card .price {
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+  .card .change {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 8px;
+  }
+  .up { color: var(--green); background: rgba(53, 208, 127, 0.12); }
+  .down { color: var(--red); background: rgba(255, 92, 92, 0.12); }
+  .flat { color: var(--muted); background: rgba(137, 147, 168, 0.12); }
+  .card .meta {
+    color: var(--muted);
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card svg { width: 100%; height: 36px; margin: 8px 0 4px; display: block; }
+  .status-warning {
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+  footer {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    color: var(--muted);
+    font-size: 0.78rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mi cartera</h1>
+  <div id="updated">Cargando...</div>
+</header>
+
+<main id="contenido"></main>
+
+<footer>
+  Datos vía Yahoo Finance. Cierre del día anterior para acciones/ETFs/ETCs;
+  último valor liquidativo conocido para fondos indexados.
+</footer>
+
+<script>
+async function cargarDatos() {
+  const resp = await fetch('data.json?_=' + Date.now());
+  const data = await resp.json();
+  return data;
+}
+
+function formateaFecha(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  return d.toLocaleString('es-ES', { dateStyle: 'medium', timeStyle: 'short' });
+}
+
+function sparkline(history) {
+  if (!history || history.length < 2) return '';
+  const valores = history.map(h => h.close);
+  const min = Math.min(...valores);
+  const max = Math.max(...valores);
+  const rango = (max - min) || 1;
+  const w = 200, h = 36;
+  const paso = w / (valores.length - 1);
+  const puntos = valores.map((v, i) => {
+    const x = i * paso;
+    const y = h - ((v - min) / rango) * h;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+  const subida = valores[valores.length - 1] >= valores[0];
+  const color = subida ? '#35d07f' : '#ff5c5c';
+  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+    <polyline points="${puntos}" fill="none" stroke="${color}" stroke-width="2" />
+  </svg>`;
+}
+
+function tarjeta(h) {
+  if (h.status === 'sin_simbolo' || h.status === 'error' || h.status === 'sin_datos') {
+    return `<div class="card">
+      <div class="name">${h.name}</div>
+      <div class="status-warning">Sin datos disponibles todavía</div>
+    </div>`;
+  }
+
+  const tieneIntradia = h.intraday_price != null && h.intraday_status === 'ok';
+  const precioMostrado = tieneIntradia ? h.intraday_price : h.last_close;
+  const cambio = tieneIntradia ? h.intraday_change_pct : h.change_pct;
+
+  let claseCambio = 'flat';
+  let signo = '';
+  if (cambio > 0) { claseCambio = 'up'; signo = '+'; }
+  else if (cambio < 0) { claseCambio = 'down'; }
+
+  const precio = precioMostrado != null
+    ? precioMostrado.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 4 })
+    : '—';
+
+  const etiquetaTiempo = tieneIntradia
+    ? `Intradía · ${h.intraday_time} UTC`
+    : (h.last_date || '');
+
+  return `<div class="card">
+    <div class="name">${h.name}</div>
+    <div class="price-row">
+      <span class="price">${precio} ${h.currency || ''}</span>
+      ${cambio != null ? `<span class="change ${claseCambio}">${signo}${cambio}%</span>` : ''}
+    </div>
+    ${sparkline(h.history)}
+    <div class="meta">
+      <span>${h.symbol || ''}</span>
+      <span>${etiquetaTiempo}</span>
+    </div>
+  </div>`;
+}
+
+async function render() {
+  const data = await cargarDatos();
+  document.getElementById('updated').textContent =
+    'Actualizado: ' + formateaFecha(data.updated_at);
+
+  const holdings = Object.values(data.holdings);
+  const grupos = {};
+  holdings.forEach(h => {
+    const tipo = h.type || 'Otros';
+    if (!grupos[tipo]) grupos[tipo] = [];
+    grupos[tipo].push(h);
+  });
+
+  const orden = ['Accion', 'ETF', 'ETC', 'Fondo indexado', 'Fondo', 'Renta fija'];
+  const tipos = Object.keys(grupos).sort(
+    (a, b) => orden.indexOf(a) - orden.indexOf(b)
+  );
+
+  const contenido = document.getElementById('contenido');
+  contenido.innerHTML = tipos.map(tipo => `
+    <section class="grupo">
+      <h2>${tipo}</h2>
+      <div class="grid">
+        ${grupos[tipo].map(tarjeta).join('')}
+      </div>
+    </section>
+  `).join('');
+}
+
+render().catch(err => {
+  document.getElementById('contenido').innerHTML =
+    '<p>No se ha podido cargar data.json todavía. Ejecuta fetch_prices.py o espera a la primera actualización automática.</p>';
+  console.error(err);
+});
+</script>
+
+</body>
+</html>

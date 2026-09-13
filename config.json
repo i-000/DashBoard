@@ -1,0 +1,81 @@
+{
+  "holdings": [
+    {
+      "name": "Vanguard U.S. 500 Stock Index Fund EUR Acc",
+      "isin": "IE0032126645",
+      "type": "Fondo indexado",
+      "yahoo_symbol": "IE0032126645.IR",
+      "verified": true
+    },
+    {
+      "name": "Vanguard Global Stock Index Fund EUR Acc",
+      "isin": "IE00B03HD191",
+      "type": "Fondo indexado",
+      "yahoo_symbol": "IE00B03HD191.IR",
+      "verified": true
+    },
+    {
+      "name": "Vanguard Emerging Markets Stock Index Fund EUR Acc",
+      "isin": "IE0031786696",
+      "type": "Fondo indexado",
+      "yahoo_symbol": "IE0031786696.IR",
+      "verified": true
+    },
+    {
+      "name": "My Investor Cartera Permanente",
+      "isin": "ES0156572002",
+      "type": "Fondo",
+      "yahoo_symbol": "0P0001BODO.F",
+      "verified": true
+    },
+    {
+      "name": "Storm Fund II - Storm Bond Fund RC EUR",
+      "isin": "LU0840158819",
+      "type": "Renta fija",
+      "yahoo_symbol": "0P0000X09U.F",
+      "verified": true
+    },
+    {
+      "name": "iShares Physical Gold ETC",
+      "isin": "IE00B4ND3602",
+      "type": "ETC",
+      "yahoo_symbol": "PPFB.DE",
+      "verified": true
+    },
+    {
+      "name": "iShares NASDAQ 100 UCITS ETF",
+      "isin": "IE00B53SZB19",
+      "type": "ETF",
+      "yahoo_symbol": "SXRV.DE",
+      "verified": true
+    },
+    {
+      "name": "iShares Copper Miners UCITS ETF",
+      "isin": "IE00063FT9K6",
+      "type": "ETF",
+      "yahoo_symbol": "IE00063FT9K6.SG",
+      "verified": true
+    },
+    {
+      "name": "Apple Inc.",
+      "isin": null,
+      "type": "Accion",
+      "yahoo_symbol": "AAPL",
+      "verified": true
+    },
+    {
+      "name": "SpaceX",
+      "isin": null,
+      "type": "Accion",
+      "yahoo_symbol": "SPCX",
+      "verified": true
+    },
+    {
+      "name": "ASML Holding",
+      "isin": null,
+      "type": "Accion",
+      "yahoo_symbol": "ASML",
+      "verified": true
+    }
+  ]
+}
