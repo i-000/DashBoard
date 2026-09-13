@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T17:03:41.071679Z",
+  "updated_at": "2026-09-13T17:13:53.429970Z",
   "holdings": {
     "IE0032126645": {
       "name": "Vanguard U.S. 500 Stock Index Fund EUR Acc",
@@ -209,14 +209,103 @@
       "name": "Vanguard Emerging Markets Stock Index Fund EUR Acc",
       "type": "Fondo indexado",
       "isin": "IE0031786696",
-      "symbol": "IE0031786696.IR",
-      "currency": null,
-      "history": [],
-      "last_close": null,
-      "prev_close": null,
-      "change_pct": null,
-      "last_date": null,
-      "status": "error"
+      "symbol": "0P00012I6A.F",
+      "currency": "EUR",
+      "history": [
+        {
+          "date": "2026-08-11",
+          "close": 302.857
+        },
+        {
+          "date": "2026-08-12",
+          "close": 305.9772
+        },
+        {
+          "date": "2026-08-13",
+          "close": 308.3837
+        },
+        {
+          "date": "2026-08-14",
+          "close": 308.4714
+        },
+        {
+          "date": "2026-08-17",
+          "close": 309.8575
+        },
+        {
+          "date": "2026-08-18",
+          "close": 307.2339
+        },
+        {
+          "date": "2026-08-19",
+          "close": 300.5405
+        },
+        {
+          "date": "2026-08-20",
+          "close": 305.6776
+        },
+        {
+          "date": "2026-08-21",
+          "close": 309.8589
+        },
+        {
+          "date": "2026-08-24",
+          "close": 305.1476
+        },
+        {
+          "date": "2026-08-25",
+          "close": 306.8114
+        },
+        {
+          "date": "2026-08-26",
+          "close": 309.7236
+        },
+        {
+          "date": "2026-08-27",
+          "close": 310.7805
+        },
+        {
+          "date": "2026-08-28",
+          "close": 311.341
+        },
+        {
+          "date": "2026-08-31",
+          "close": 311.0071
+        },
+        {
+          "date": "2026-09-01",
+          "close": 313.0161
+        },
+        {
+          "date": "2026-09-02",
+          "close": 308.2859
+        },
+        {
+          "date": "2026-09-03",
+          "close": 307.583
+        },
+        {
+          "date": "2026-09-04",
+          "close": 312.3297
+        },
+        {
+          "date": "2026-09-07",
+          "close": 317.4221
+        },
+        {
+          "date": "2026-09-09",
+          "close": 316.8368
+        },
+        {
+          "date": "2026-09-10",
+          "close": 315.527
+        }
+      ],
+      "last_close": 315.527,
+      "prev_close": 316.8368,
+      "change_pct": -0.41,
+      "last_date": "2026-09-10",
+      "status": "ok"
     },
     "ES0156572002": {
       "name": "My Investor Cartera Permanente",
