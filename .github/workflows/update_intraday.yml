@@ -1,0 +1,42 @@
+name: Actualizar intradía (acciones/ETF/ETC)
+
+on:
+  schedule:
+    # cada 15 minutos, de 07:00 a 21:00 UTC, de lunes a viernes
+    # (cubre el horario habitual de las bolsas europeas y estadounidenses)
+    - cron: "*/15 7-21 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar-intradia:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Descargar precio intradía
+        run: python fetch_intraday.py
+
+      - name: Guardar cambios en el repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase
+          git add docs/data.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios que guardar."
+          else
+            git commit -m "Actualiza precio intradía $(date -u +'%Y-%m-%d %H:%M')"
+            git push
+          fi
