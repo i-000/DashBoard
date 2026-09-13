@@ -136,7 +136,7 @@ function formateaFecha(iso) {
   return d.toLocaleString('es-ES', { dateStyle: 'medium', timeStyle: 'short' });
 }
 
-function sparkline(history) {
+function sparkline(history, cambioHoy) {
   if (!history || history.length < 2) return '';
   const valores = history.map(h => h.close);
   const min = Math.min(...valores);
@@ -149,8 +149,9 @@ function sparkline(history) {
     const y = h - ((v - min) / rango) * h;
     return `${x.toFixed(1)},${y.toFixed(1)}`;
   }).join(' ');
-  const subida = valores[valores.length - 1] >= valores[0];
-  const color = subida ? '#35d07f' : '#ff5c5c';
+  // El color de la línea sigue la variación del día (misma que el badge de arriba),
+  // no la tendencia de todo el histórico guardado.
+  const color = cambioHoy < 0 ? '#ff5c5c' : '#35d07f';
   return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
     <polyline points="${puntos}" fill="none" stroke="${color}" stroke-width="2" />
   </svg>`;
@@ -187,7 +188,7 @@ function tarjeta(h) {
       <span class="price">${precio} ${h.currency || ''}</span>
       ${cambio != null ? `<span class="change ${claseCambio}">${signo}${cambio}%</span>` : ''}
     </div>
-    ${sparkline(h.history)}
+    ${sparkline(h.history, cambio)}
     <div class="meta">
       <span>${h.symbol || ''}</span>
       <span>${etiquetaTiempo}</span>
