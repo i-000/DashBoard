@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14T10:12:33.141539Z",
+  "updated_at": "2026-09-15T09:42:37.930512Z",
   "holdings": {
     "IE0032126645": {
       "name": "Vanguard U.S. 500 Stock Index Fund EUR Acc",
@@ -95,12 +95,16 @@
         {
           "date": "2026-09-10",
           "close": 79.7392
+        },
+        {
+          "date": "2026-09-11",
+          "close": 80.5208
         }
       ],
-      "last_close": 79.7392,
-      "prev_close": 80.0714,
-      "change_pct": -0.41,
-      "last_date": "2026-09-10",
+      "last_close": 80.5208,
+      "prev_close": 79.7392,
+      "change_pct": 0.98,
+      "last_date": "2026-09-11",
       "status": "ok"
     },
     "IE00B03HD191": {
@@ -197,12 +201,16 @@
         {
           "date": "2026-09-10",
           "close": 62.4444
+        },
+        {
+          "date": "2026-09-11",
+          "close": 62.9272
         }
       ],
-      "last_close": 62.4444,
-      "prev_close": 62.7585,
-      "change_pct": -0.5,
-      "last_date": "2026-09-10",
+      "last_close": 62.9272,
+      "prev_close": 62.4444,
+      "change_pct": 0.77,
+      "last_date": "2026-09-11",
       "status": "ok"
     },
     "IE0031786696": {
@@ -299,12 +307,16 @@
         {
           "date": "2026-09-10",
           "close": 315.527
+        },
+        {
+          "date": "2026-09-11",
+          "close": 311.6617
         }
       ],
-      "last_close": 315.527,
-      "prev_close": 316.8368,
-      "change_pct": -0.41,
-      "last_date": "2026-09-10",
+      "last_close": 311.6617,
+      "prev_close": 315.527,
+      "change_pct": -1.23,
+      "last_date": "2026-09-11",
       "status": "ok"
     },
     "ES0156572002": {
@@ -401,12 +413,16 @@
         {
           "date": "2026-09-10",
           "close": 114.8446
+        },
+        {
+          "date": "2026-09-11",
+          "close": 115.0511
         }
       ],
-      "last_close": 114.8446,
-      "prev_close": 115.5538,
-      "change_pct": -0.61,
-      "last_date": "2026-09-10",
+      "last_close": 115.0511,
+      "prev_close": 114.8446,
+      "change_pct": 0.18,
+      "last_date": "2026-09-11",
       "status": "ok"
     },
     "LU0840158819": {
@@ -511,12 +527,16 @@
         {
           "date": "2026-09-11",
           "close": 158.45
+        },
+        {
+          "date": "2026-09-14",
+          "close": 158.48
         }
       ],
-      "last_close": 158.45,
-      "prev_close": 158.51,
-      "change_pct": -0.04,
-      "last_date": "2026-09-11",
+      "last_close": 158.48,
+      "prev_close": 158.45,
+      "change_pct": 0.02,
+      "last_date": "2026-09-14",
       "status": "ok"
     },
     "IE00B4ND3602": {
@@ -625,12 +645,16 @@
         {
           "date": "2026-09-14",
           "close": 72.035
+        },
+        {
+          "date": "2026-09-15",
+          "close": 71.73
         }
       ],
-      "last_close": 72.035,
-      "prev_close": 73.075,
-      "change_pct": -1.42,
-      "last_date": "2026-09-14",
+      "last_close": 71.73,
+      "prev_close": 72.035,
+      "change_pct": -0.42,
+      "last_date": "2026-09-15",
       "status": "ok"
     },
     "IE00B53SZB19": {
@@ -739,12 +763,16 @@
         {
           "date": "2026-09-14",
           "close": 1435.4
+        },
+        {
+          "date": "2026-09-15",
+          "close": 1442.2
         }
       ],
-      "last_close": 1435.4,
-      "prev_close": 1458.6,
-      "change_pct": -1.59,
-      "last_date": "2026-09-14",
+      "last_close": 1442.2,
+      "prev_close": 1435.4,
+      "change_pct": 0.47,
+      "last_date": "2026-09-15",
       "status": "ok"
     },
     "IE00063FT9K6": {
@@ -853,12 +881,16 @@
         {
           "date": "2026-09-14",
           "close": 9.817
+        },
+        {
+          "date": "2026-09-15",
+          "close": 9.637
         }
       ],
-      "last_close": 9.817,
-      "prev_close": 10.14,
-      "change_pct": -3.19,
-      "last_date": "2026-09-14",
+      "last_close": 9.637,
+      "prev_close": 9.817,
+      "change_pct": -1.83,
+      "last_date": "2026-09-15",
       "status": "ok"
     },
     "AAPL": {
@@ -955,12 +987,16 @@
         {
           "date": "2026-09-11",
           "close": 332.27
+        },
+        {
+          "date": "2026-09-14",
+          "close": 333.08
         }
       ],
-      "last_close": 332.27,
-      "prev_close": 326.57,
-      "change_pct": 1.75,
-      "last_date": "2026-09-11",
+      "last_close": 333.08,
+      "prev_close": 332.27,
+      "change_pct": 0.24,
+      "last_date": "2026-09-14",
       "status": "ok"
     },
     "SPCX": {
@@ -1057,12 +1093,16 @@
         {
           "date": "2026-09-11",
           "close": 151.21
+        },
+        {
+          "date": "2026-09-14",
+          "close": 148.15
         }
       ],
-      "last_close": 151.21,
-      "prev_close": 148.18,
-      "change_pct": 2.04,
-      "last_date": "2026-09-11",
+      "last_close": 148.15,
+      "prev_close": 151.21,
+      "change_pct": -2.02,
+      "last_date": "2026-09-14",
       "status": "ok"
     },
     "NL0010273215": {
@@ -1166,13 +1206,17 @@
         },
         {
           "date": "2026-09-14",
-          "close": 1389.6
+          "close": 1387.8
+        },
+        {
+          "date": "2026-09-15",
+          "close": 1389.2
         }
       ],
-      "last_close": 1389.6,
-      "prev_close": 1478.4,
-      "change_pct": -6.01,
-      "last_date": "2026-09-14",
+      "last_close": 1389.2,
+      "prev_close": 1387.8,
+      "change_pct": 0.1,
+      "last_date": "2026-09-15",
       "status": "ok"
     }
   }
