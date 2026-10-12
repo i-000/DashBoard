@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T10:53:24.441829Z",
+  "updated_at": "2026-10-12T12:35:46.268112Z",
   "holdings": {
     "IE0032126645": {
       "name": "Vanguard U.S. 500 Stock Index Fund EUR Acc",
@@ -968,13 +968,17 @@
         },
         {
           "date": "2026-10-09",
-          "close": 72.34
+          "close": 72.585
+        },
+        {
+          "date": "2026-10-12",
+          "close": 72.32
         }
       ],
-      "last_close": 72.34,
-      "prev_close": 71.29,
-      "change_pct": 1.47,
-      "last_date": "2026-10-09",
+      "last_close": 72.32,
+      "prev_close": 72.585,
+      "change_pct": -0.37,
+      "last_date": "2026-10-12",
       "status": "ok"
     },
     "IE00B53SZB19": {
@@ -1158,13 +1162,17 @@
         },
         {
           "date": "2026-10-09",
-          "close": 1588.2
+          "close": 1581.2
+        },
+        {
+          "date": "2026-10-12",
+          "close": 1585.2
         }
       ],
-      "last_close": 1588.2,
-      "prev_close": 1589.8,
-      "change_pct": -0.1,
-      "last_date": "2026-10-09",
+      "last_close": 1585.2,
+      "prev_close": 1581.2,
+      "change_pct": 0.25,
+      "last_date": "2026-10-12",
       "status": "ok"
     },
     "IE00063FT9K6": {
@@ -1348,13 +1356,17 @@
         },
         {
           "date": "2026-10-09",
-          "close": 10.02
+          "close": 10.13
+        },
+        {
+          "date": "2026-10-12",
+          "close": 10.182
         }
       ],
-      "last_close": 10.02,
-      "prev_close": 9.862,
-      "change_pct": 1.6,
-      "last_date": "2026-10-09",
+      "last_close": 10.182,
+      "prev_close": 10.13,
+      "change_pct": 0.51,
+      "last_date": "2026-10-12",
       "status": "ok"
     },
     "AAPL": {
@@ -1903,12 +1915,16 @@
         {
           "date": "2026-10-09",
           "close": 1601.6
+        },
+        {
+          "date": "2026-10-12",
+          "close": 1602.2
         }
       ],
-      "last_close": 1601.6,
-      "prev_close": 1630.6,
-      "change_pct": -1.78,
-      "last_date": "2026-10-09",
+      "last_close": 1602.2,
+      "prev_close": 1601.6,
+      "change_pct": 0.04,
+      "last_date": "2026-10-12",
       "status": "ok"
     }
   }
