@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T09:45:17.885467Z",
+  "updated_at": "2026-10-23T09:41:28.737217Z",
   "holdings": {
     "IE0032126645": {
       "name": "Vanguard U.S. 500 Stock Index Fund EUR Acc",
@@ -443,12 +443,16 @@
         {
           "date": "2026-10-20",
           "close": 300.2251
+        },
+        {
+          "date": "2026-10-21",
+          "close": 303.7628
         }
       ],
-      "last_close": 300.2251,
-      "prev_close": 304.3487,
-      "change_pct": -1.35,
-      "last_date": "2026-10-20",
+      "last_close": 303.7628,
+      "prev_close": 300.2251,
+      "change_pct": 1.18,
+      "last_date": "2026-10-21",
       "status": "ok"
     },
     "ES0156572002": {
@@ -657,12 +661,16 @@
         {
           "date": "2026-10-20",
           "close": 115.9938
+        },
+        {
+          "date": "2026-10-21",
+          "close": 116.3588
         }
       ],
-      "last_close": 115.9938,
-      "prev_close": 115.9637,
-      "change_pct": 0.03,
-      "last_date": "2026-10-20",
+      "last_close": 116.3588,
+      "prev_close": 115.9938,
+      "change_pct": 0.31,
+      "last_date": "2026-10-21",
       "status": "ok"
     },
     "LU0840158819": {
@@ -875,12 +883,16 @@
         {
           "date": "2026-10-21",
           "close": 158.4
+        },
+        {
+          "date": "2026-10-22",
+          "close": 158.28
         }
       ],
-      "last_close": 158.4,
-      "prev_close": 158.36,
-      "change_pct": 0.03,
-      "last_date": "2026-10-21",
+      "last_close": 158.28,
+      "prev_close": 158.4,
+      "change_pct": -0.08,
+      "last_date": "2026-10-22",
       "status": "ok"
     },
     "IE00B4ND3602": {
@@ -1101,12 +1113,16 @@
         {
           "date": "2026-10-22",
           "close": 70.53
+        },
+        {
+          "date": "2026-10-23",
+          "close": 69.78
         }
       ],
-      "last_close": 70.53,
-      "prev_close": 71.51,
-      "change_pct": -1.37,
-      "last_date": "2026-10-22",
+      "last_close": 69.78,
+      "prev_close": 70.53,
+      "change_pct": -1.06,
+      "last_date": "2026-10-23",
       "status": "ok"
     },
     "IE00B53SZB19": {
@@ -1327,12 +1343,16 @@
         {
           "date": "2026-10-22",
           "close": 1497.8
+        },
+        {
+          "date": "2026-10-23",
+          "close": 1488.2
         }
       ],
-      "last_close": 1497.8,
-      "prev_close": 1527.0,
-      "change_pct": -1.91,
-      "last_date": "2026-10-22",
+      "last_close": 1488.2,
+      "prev_close": 1497.8,
+      "change_pct": -0.64,
+      "last_date": "2026-10-23",
       "status": "ok"
     },
     "IE00063FT9K6": {
@@ -1553,12 +1573,16 @@
         {
           "date": "2026-10-22",
           "close": 9.122
+        },
+        {
+          "date": "2026-10-23",
+          "close": 8.98
         }
       ],
-      "last_close": 9.122,
-      "prev_close": 9.401,
-      "change_pct": -2.97,
-      "last_date": "2026-10-22",
+      "last_close": 8.98,
+      "prev_close": 9.122,
+      "change_pct": -1.56,
+      "last_date": "2026-10-23",
       "status": "ok"
     },
     "AAPL": {
@@ -1767,12 +1791,16 @@
         {
           "date": "2026-10-21",
           "close": 343.99
+        },
+        {
+          "date": "2026-10-22",
+          "close": 348.22
         }
       ],
-      "last_close": 343.99,
-      "prev_close": 339.5,
-      "change_pct": 1.32,
-      "last_date": "2026-10-21",
+      "last_close": 348.22,
+      "prev_close": 343.99,
+      "change_pct": 1.23,
+      "last_date": "2026-10-22",
       "status": "ok"
     },
     "SPCX": {
@@ -1981,12 +2009,16 @@
         {
           "date": "2026-10-21",
           "close": 159.31
+        },
+        {
+          "date": "2026-10-22",
+          "close": 144.75
         }
       ],
-      "last_close": 159.31,
-      "prev_close": 147.79,
-      "change_pct": 7.79,
-      "last_date": "2026-10-21",
+      "last_close": 144.75,
+      "prev_close": 159.31,
+      "change_pct": -9.14,
+      "last_date": "2026-10-22",
       "status": "ok"
     },
     "NL0010273215": {
@@ -2206,13 +2238,17 @@
         },
         {
           "date": "2026-10-22",
-          "close": 1444.0
+          "close": 1419.6
+        },
+        {
+          "date": "2026-10-23",
+          "close": 1409.2
         }
       ],
-      "last_close": 1444.0,
-      "prev_close": 1493.8,
-      "change_pct": -3.33,
-      "last_date": "2026-10-22",
+      "last_close": 1409.2,
+      "prev_close": 1419.6,
+      "change_pct": -0.73,
+      "last_date": "2026-10-23",
       "status": "ok"
     }
   }
