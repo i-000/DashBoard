@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20T13:44:47.260535Z",
+  "updated_at": "2026-11-21T13:09:56.528953Z",
   "holdings": {
     "IE0032126645": {
       "name": "Vanguard U.S. 500 Stock Index Fund EUR Acc",
@@ -523,12 +523,16 @@
         {
           "date": "2026-11-18",
           "close": 285.6579
+        },
+        {
+          "date": "2026-11-19",
+          "close": 281.675
         }
       ],
-      "last_close": 285.6579,
-      "prev_close": 285.2398,
-      "change_pct": 0.15,
-      "last_date": "2026-11-18",
+      "last_close": 281.675,
+      "prev_close": 285.6579,
+      "change_pct": -1.39,
+      "last_date": "2026-11-19",
       "status": "ok"
     },
     "ES0156572002": {
@@ -821,12 +825,16 @@
         {
           "date": "2026-11-18",
           "close": 113.9942
+        },
+        {
+          "date": "2026-11-19",
+          "close": 113.3418
         }
       ],
-      "last_close": 113.9942,
-      "prev_close": 114.877,
-      "change_pct": -0.77,
-      "last_date": "2026-11-18",
+      "last_close": 113.3418,
+      "prev_close": 113.9942,
+      "change_pct": -0.57,
+      "last_date": "2026-11-19",
       "status": "ok"
     },
     "LU0840158819": {
@@ -1123,12 +1131,16 @@
         {
           "date": "2026-11-19",
           "close": 158.54
+        },
+        {
+          "date": "2026-11-20",
+          "close": 158.52
         }
       ],
-      "last_close": 158.54,
-      "prev_close": 158.5,
-      "change_pct": 0.03,
-      "last_date": "2026-11-19",
+      "last_close": 158.52,
+      "prev_close": 158.54,
+      "change_pct": -0.01,
+      "last_date": "2026-11-20",
       "status": "ok"
     },
     "IE00B4ND3602": {
@@ -1432,12 +1444,12 @@
         },
         {
           "date": "2026-11-20",
-          "close": 62.9
+          "close": 62.595
         }
       ],
-      "last_close": 62.9,
+      "last_close": 62.595,
       "prev_close": 65.085,
-      "change_pct": -3.36,
+      "change_pct": -3.83,
       "last_date": "2026-11-20",
       "status": "ok"
     },
@@ -1742,12 +1754,12 @@
         },
         {
           "date": "2026-11-20",
-          "close": 1360.4
+          "close": 1342.2
         }
       ],
-      "last_close": 1360.4,
+      "last_close": 1342.2,
       "prev_close": 1424.6,
-      "change_pct": -4.51,
+      "change_pct": -5.78,
       "last_date": "2026-11-20",
       "status": "ok"
     },
@@ -2052,12 +2064,12 @@
         },
         {
           "date": "2026-11-20",
-          "close": 7.452
+          "close": 7.343
         }
       ],
-      "last_close": 7.452,
+      "last_close": 7.343,
       "prev_close": 7.795,
-      "change_pct": -4.4,
+      "change_pct": -5.8,
       "last_date": "2026-11-20",
       "status": "ok"
     },
@@ -2351,12 +2363,16 @@
         {
           "date": "2026-11-19",
           "close": 349.21
+        },
+        {
+          "date": "2026-11-20",
+          "close": 342.56
         }
       ],
-      "last_close": 349.21,
-      "prev_close": 352.45,
-      "change_pct": -0.92,
-      "last_date": "2026-11-19",
+      "last_close": 342.56,
+      "prev_close": 349.21,
+      "change_pct": -1.9,
+      "last_date": "2026-11-20",
       "status": "ok"
     },
     "SPCX": {
@@ -2649,12 +2665,16 @@
         {
           "date": "2026-11-19",
           "close": 138.43
+        },
+        {
+          "date": "2026-11-20",
+          "close": 127.79
         }
       ],
-      "last_close": 138.43,
-      "prev_close": 143.5,
-      "change_pct": -3.53,
-      "last_date": "2026-11-19",
+      "last_close": 127.79,
+      "prev_close": 138.43,
+      "change_pct": -7.69,
+      "last_date": "2026-11-20",
       "status": "ok"
     },
     "NL0010273215": {
@@ -2958,12 +2978,12 @@
         },
         {
           "date": "2026-11-20",
-          "close": 1203.6
+          "close": 1168.0
         }
       ],
-      "last_close": 1203.6,
+      "last_close": 1168.0,
       "prev_close": 1288.2,
-      "change_pct": -6.57,
+      "change_pct": -9.33,
       "last_date": "2026-11-20",
       "status": "ok"
     }
